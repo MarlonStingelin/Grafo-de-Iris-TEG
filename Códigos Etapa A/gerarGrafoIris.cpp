@@ -58,12 +58,10 @@ Grafo* criarGrafo(int numVertices) {
 }
 
 double calcularDistanciaEuclidiana(Vertice* v1, Vertice* v2) {
-    double soma = 0.0;
-    soma += pow(v1->sepal_length - v2->sepal_length, 2);
-    soma += pow(v1->sepal_width - v2->sepal_width, 2);
-    soma += pow(v1->petal_length - v2->petal_length, 2);
-    soma += pow(v1->petal_width - v2->petal_width, 2);
-    return sqrt(soma);
+  return sqrt(pow(v1->sepal_length - v2->sepal_length, 2) +
+              pow(v1->sepal_width - v2->sepal_width, 2) +
+              pow(v1->petal_length - v2->petal_length, 2) +
+              pow(v1->petal_width - v2->petal_width, 2));
 }
 
 double calcularDistanciaNormalizada(Vertice* v1, Vertice* v2) {
