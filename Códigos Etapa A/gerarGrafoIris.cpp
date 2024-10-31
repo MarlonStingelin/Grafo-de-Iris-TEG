@@ -113,7 +113,7 @@ void carregarDadosIris(Grafo* grafo, const char* nomeArquivo) {
 void salvarGrafo(Grafo* grafo, const char* nomeArquivo) {
     FILE* arquivo = fopen(nomeArquivo, "w");
     if (arquivo == NULL) {
-        printf("Erro ao abrir o arquivo de saída.\n");
+        printf("Erro ao abrir o arquivo de saÃ­da.\n");
         exit(1);
     }
 
