@@ -60,12 +60,10 @@ Grafo* criarGrafo(int numVertices) {
 }
 
 double calcularDistanciaEuclidiana(Vertice* v1, Vertice* v2) {
-    double soma = 0.0;
-    soma += pow(v1->sepal_length - v2->sepal_length, 2);
-    soma += pow(v1->sepal_width - v2->sepal_width, 2);
-    soma += pow(v1->petal_length - v2->petal_length, 2);
-    soma += pow(v1->petal_width - v2->petal_width, 2);
-    return sqrt(soma);
+  return sqrt(pow(v1->sepal_length - v2->sepal_length, 2) +
+              pow(v1->sepal_width - v2->sepal_width, 2) +
+              pow(v1->petal_length - v2->petal_length, 2) +
+              pow(v1->petal_width - v2->petal_width, 2));
 }
 
 double calcularDistanciaNormalizada(Vertice* v1, Vertice* v2) {
@@ -116,7 +114,7 @@ void carregarDadosIris(Grafo* grafo, const char* nomeArquivo) {
 void salvarGrafo(Grafo* grafo, const char* nomeArquivo) {
     FILE* arquivo = fopen(nomeArquivo, "w");
     if (arquivo == NULL) {
-        printf("Erro ao abrir o arquivo de saÌda.\n");
+        printf("Erro ao abrir o arquivo de sa√≠da.\n");
         exit(1);
     }
 
@@ -314,8 +312,8 @@ void realizarTestesComVariosLimiares(Grafo* grafo) {
         double acuracia = calcularAcuracia(TP, TN, FP, FN);
         
         printf("Limiar: %.2f\n", limiarAtual);
-        printf("Matriz de Confus„o: TP=%d, TN=%d, FP=%d, FN=%d\n", TP, TN, FP, FN);
-        printf("Acur·cia: %.2f%%\n", acuracia * 100);
+        printf("Matriz de Confus√£o: TP=%d, TN=%d, FP=%d, FN=%d\n", TP, TN, FP, FN);
+        printf("Acur√°cia: %.2f%%\n", acuracia * 100);
     }
 }
 
