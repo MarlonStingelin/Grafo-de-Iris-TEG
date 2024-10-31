@@ -1,0 +1,17 @@
+1
+-resolver se o grafo da iris em c ta rodando
+-fazer realtorio
+-tirar instruções de grafo em python
+-fazer relatorio e adicionar da onde vem o axe 3d
+
+2
+-tentar rodar
+-fazer o relatorio
+-tirar instruções de grafo em python
+-fazer relatorio 
+
+3
+-tentar rodar
+-fazer relatorio, variety ganha função
+-tirar instruções de grafo em python
+-fazer relatorio 
